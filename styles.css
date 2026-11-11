@@ -5,9 +5,9 @@
 }
 
 body {
-  background-color: #516dff;
-  color: #fff;
-  font-family: 'Press Start 2P', sans-serif;
+  background-color: #258538;
+  color: #efb1b6;
+  font-family: /*'Press Start 2P'*/ verdana, sans-serif;
   height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -16,7 +16,7 @@ body {
 
 .btn {
   border: 0;
-  background-color: #fff;
+  background-color: #efb1b6;
   color: #516dff;
   padding: 15px 20px;
   font-family: inherit;
@@ -52,7 +52,7 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #efb1b6;
 }
 
 h1 {
@@ -75,8 +75,8 @@ h1 {
 
 .choose-fruit-btn {
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #efb1b6;
+  color: #efb1b6;
   cursor: pointer;
   font-family: inherit;
   width: 150px;
@@ -84,7 +84,7 @@ h1 {
 }
 
 .choose-fruit-btn:hover {
-  background-color: white;
+  background-color: efb1b6;
   color: #516dff;
 }
 
