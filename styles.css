@@ -41,7 +41,7 @@ body {
   transition: margin 0.5s ease-out;
 }
 
-.choose-insect-btn img {
+.choose-fruit-btn img {
   width: 100px;
   height: 100px;
   object-fit: contain;
@@ -61,7 +61,7 @@ h1 {
 
 /* ... */
 
-.insects-list {
+.fruit-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -69,11 +69,11 @@ h1 {
   padding: 0;
 }
 
-.insects-list li {
+.fruit-list li {
   margin: 10px;
 }
 
-.choose-insect-btn {
+.choose-fruit-btn {
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
@@ -83,12 +83,12 @@ h1 {
   height: 150px;
 }
 
-.choose-insect-btn:hover {
+.choose-fruit-btn:hover {
   background-color: white;
   color: #516dff;
 }
 
-.choose-insect-btn:active {
+.choose-fruit-btn:active {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -134,7 +134,7 @@ h1 {
 
 /* After the closing h5, temporarily add a div with a class of insect containing an image (the fly) so we can see it to style it */
 
-.insect {
+.fruit {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -150,12 +150,12 @@ h1 {
   left: 300px;
 }
 
-.insect img {
+.fruit img {
   width: 100px;
   height: 100px;
 }
 
-.insect.caught {
+.fruit.caught {
   transform: translate(-50%, -50%) scale(0);
   /* Temporarily add the class caught to the div class="insect" to test */
 }

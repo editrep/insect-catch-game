@@ -1,7 +1,7 @@
 
 
 const screens = document.querySelectorAll('.screen');
-const chooseInsectBtns = document.querySelectorAll('.choose-insect-btn');
+const chooseFruitBtns = document.querySelectorAll('.choose-fruit-btn');
 const startBtn = document.getElementById('start-btn');
 const gameContainer = document.getElementById('game-container');
 const timeEl = document.getElementById('time');
@@ -10,18 +10,18 @@ const message = document.getElementById('message');
 
 let seconds = 0;
 let score = 0;
-let selectedInsect = {};
+let selectedFruit = {};
 
 startBtn.addEventListener('click', () => screens[0].classList.add('up'));
 
-chooseInsectBtns.forEach(btn => {
+chooseFruitBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const img = btn.querySelector('img');
         const src = img.getAttribute('src');
         const alt = img.getAttribute('alt');
-        selectedInsect = { src, alt };
+        selectedFruit = { src, alt };
         screens[1].classList.add('up');
-        setTimeout(createInsect, 1000);
+        setTimeout(createFruit, 1000);
         startGame();
     });
 });
@@ -39,17 +39,17 @@ function increaseTime() {
     seconds++;
 }
 
-function createInsect() {
-    const insect = document.createElement('div');
-    insect.classList.add('insect');
+function createFruit() {
+    const fruit = document.createElement('div');
+    fruit.classList.add('fruit');
     const { x, y } = getRandomLocation();
-    insect.style.top = `${y}px`;
-    insect.style.left = `${x}px`;
-    insect.innerHTML = `<img src="${selectedInsect.src}" alt="${selectedInsect.alt}" style="transform: rotate(${Math.random() * 360}deg)" />`;
+    fruit.style.top = `${y}px`;
+    fruit.style.left = `${x}px`;
+    fruit.innerHTML = `<img src="${selectedFruit.src}" alt="${selectedFruit.alt}" style="transform: rotate(${Math.random() * 360}deg)" />`;
 
-    insect.addEventListener('click', catchInsect);
+    fruit.addEventListener('click', catchFruit);
 
-    gameContainer.appendChild(insect);
+    gameContainer.appendChild(fruit);
 }
 
 function getRandomLocation() {
@@ -60,16 +60,16 @@ function getRandomLocation() {
     return { x, y };
 }
 
-function catchInsect() {
+function catchFruit() {
     increaseScore();
     this.classList.add('caught');
     setTimeout(() => this.remove(), 2000);
-    addInsects();
+    addFruits();
 }
 
-function addInsects() {
-    setTimeout(createInsect, 1000);
-    setTimeout(createInsect, 1500);
+function addFruits() {
+    setTimeout(createFruit, 1000);
+    setTimeout(createFruit, 1500);
 }
 
 function increaseScore() {
