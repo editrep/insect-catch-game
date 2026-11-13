@@ -5,8 +5,8 @@
 }
 
 body {
-  background-color: #258538;
-  color: #efb1b6;
+  background-color: #8bde9c;
+  color: #4e3e1e;
   font-family: /*'Press Start 2P'*/ verdana, sans-serif;
   height: 100vh;
   overflow: hidden;
@@ -16,8 +16,9 @@ body {
 
 .btn {
   border: 0;
-  background-color: #efb1b6;
-  color: #516dff;
+  border-radius: 10px;
+  background-color: #4e3e1e;
+  color: #8bde9c;
   padding: 15px 20px;
   font-family: inherit;
   cursor: pointer;
@@ -52,7 +53,7 @@ body {
 }
 
 a {
-  color: #efb1b6;
+  color: #241c0b;
 }
 
 h1 {
@@ -75,8 +76,9 @@ h1 {
 
 .choose-fruit-btn {
   background-color: transparent;
-  border: 2px solid #efb1b6;
-  color: #efb1b6;
+  border: 2px solid #241c0b;
+  border-radius: 10px;
+  color: #241c0b;
   cursor: pointer;
   font-family: inherit;
   width: 150px;
@@ -84,8 +86,9 @@ h1 {
 }
 
 .choose-fruit-btn:hover {
-  background-color: efb1b6;
-  color: #516dff;
+  background-color: #4e3e1e;
+  border: 2px solid #241c0b;
+  color: #8bde9c;
 }
 
 .choose-fruit-btn:active {
@@ -113,6 +116,7 @@ h1 {
 .message {
   line-height: 1.7;
   background-color: rgba(0, 0, 0, 0.5);
+  color: #8bde9c;
   width: 100%;
   padding: 20px;
   z-index: 100;
@@ -128,6 +132,11 @@ h1 {
 .message.visible {
   transform: translate(-50%, 150%);
   opacity: 1;
+}
+
+.message.hide {
+  transform: translate(-50%, -150%);
+  opacity: 0;
 }
 
 /* We can now remove the visible class from h5 */
