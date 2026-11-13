@@ -6,7 +6,8 @@ const startBtn = document.getElementById('start-btn');
 const gameContainer = document.getElementById('game-container');
 const timeEl = document.getElementById('time');
 const scoreEl = document.getElementById('score');
-const message = document.getElementById('message');
+const message1 = document.getElementById('message1');
+const message2 = document.getElementById('message2');
 
 let seconds = 0;
 let score = 0;
@@ -75,8 +76,14 @@ function addFruits() {
 function increaseScore() {
     score++;
 
-    if (score > 19) {
-        message.classList.add('visible');
+    if (score > 0) {
+        message1.classList.add('visible');
+    }
+    if (score > 4) {
+        message1.classList.add('hide');
+    }
+    if (score > 24) {
+        message2.classList.add('visible');
     }
     scoreEl.innerHTML = `Score: ${score}`;
 }
